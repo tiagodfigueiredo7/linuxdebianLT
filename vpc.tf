@@ -1,4 +1,6 @@
-data "aws_subnet" "linuxtips" {
-     id = "subnet-0524ec4368bc9d9f5"
-
+resource "aws_vpc" "vpc_linux" {
+  cidr_block = "192.168.0.0/16"
+  tags = {
+    Name = "Linux"
+  }
 }
